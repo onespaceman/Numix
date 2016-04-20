@@ -142,22 +142,27 @@
     &, &.flat {
         &:focus, &:hover {
             box-shadow: none;
+            color: shade($selected_bg_color, 1.17);
         }
 
         &:checked, &:active {
-            color: $white;
             box-shadow: none;
+            color: shade($selected_bg_color, 1.07);
 
             &:focus, &:hover {
-                color: $white;
+                color: $selected_bg_color;
+            }
+
+            &:backdrop, &:backdrop label, &:backdrop image {
+                color: mix($fg_color, $selected_bg_color, .5);
             }
         }
 
         &:focus, &:hover { color: $fg; }
 
         &:active:disabled, &:checked:disabled {
-            color: $fg;
             box-shadow: none;
+            color: shade ($selected_bg_color, 1.15);
         }
 
         &:disabled:disabled {

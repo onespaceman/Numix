@@ -7,7 +7,7 @@ $bg_color: if($variant == "dark", #444, #eee);
 $fg_color: if($variant == "dark", #ddd, #555);
 $base_color: if($variant == "dark", #333, #fff);
 $text_color: if($variant == "dark", #eee, #333);
-$selected_bg_color: #f0544c;
+$selected_bg_color: #fb4757;
 $selected_fg_color: #fff;
 $tooltip_bg_color: #444;
 $tooltip_fg_color: #eee;
@@ -17,7 +17,7 @@ $borders_color: if($variant == 'light', shade($bg_color, .85), shade($bg_color, 
 $borders_edge: if($variant == 'light', transparentize(white, 0.2), transparentize($fg_color, 0.93));
 
 // dark colors
-$dark_bg_color: #444;
+$dark_bg_color: #2e3237;
 $dark_fg_color: #eee;
 
 // shadows
@@ -28,7 +28,7 @@ $light_shadow: #fff;
 $black: #000;
 $white: #fff;
 
-$button_border: shade($base_color, .9);
+$button_border: transparent;
 $entry_border: alpha($dark_shadow, .06);
 
 $scrollbar_bg_color: if($variant == 'light', darken($bg_color, 5%), mix($base_color, $bg_color, .4));
