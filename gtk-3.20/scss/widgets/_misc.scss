@@ -227,10 +227,10 @@
 
 @include exports("selected_items") {
     %selected_items {
-        background-color: $selected_bg_color;
+        background-color: transparant;
 
         @at-root %nobg_selected_items, & {
-            color: $selected_fg_color;
+            color: $selected_bg_color;
 
             @if $variant == 'light' { outline-color: transparentize($selected_fg_color, .7); }
 

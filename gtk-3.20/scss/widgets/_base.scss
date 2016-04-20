@@ -22,8 +22,8 @@
 
 %selected {
     &, &:focus {
-        background-color: $selected_bg_color;
-        color: $selected_fg_color;
+        background-color: transparent;
+        color: $selected_bg_color;
     }
 }
 
@@ -94,8 +94,8 @@ label {
     &:selected { @extend %nobg_selected_items; }
 
     selection {
-        background-color: $selected_bg_color;
-        color: $selected_fg_color;
+        background-color: transparent;
+        color: $selected_bg_color;
     }
 
     &:disabled {
