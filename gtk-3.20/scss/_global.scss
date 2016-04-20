@@ -116,7 +116,7 @@ $backdrop_menu_color: if($variant == 'light', $backdrop_base_color, mix($backdro
 $drop_target_color: #4e9a06;
 
 // widget styles
-$roundness: 2px;
-$spacing: 5px;
+$roundness: 0;
+$spacing: 3px;
 $gradient: 0;
 $contrast: .8;
