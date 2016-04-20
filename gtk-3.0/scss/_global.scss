@@ -7,13 +7,13 @@ $bg_color: if($variant == "dark", #444, #eee);
 $fg_color: if($variant == "dark", #ddd, #555);
 $base_color: if($variant == "dark", #333, #fff);
 $text_color: if($variant == "dark", #eee, #333);
-$selected_bg_color: #f0544c;
+$selected_bg_color: #fb4757;
 $selected_fg_color: #fff;
 $tooltip_bg_color: #444;
 $tooltip_fg_color: #eee;
 
 // dark colors
-$dark_bg_color: #444;
+$dark_bg_color: #2e3237;
 $dark_fg_color: #eee;
 
 // shadows
@@ -73,7 +73,7 @@ $wm_icons_unfocused_prelight: $selected_bg_color;
 $wm_icons_unfocused_pressed: shade($selected_bg_color, .8);
 
 // widget styles
-$roundness: 2px;
-$spacing: 5px;
+$roundness: 0;
+$spacing: 3px;
 $gradient: 0;
 $contrast: .8;

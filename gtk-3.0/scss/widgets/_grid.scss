@@ -18,14 +18,15 @@
 
                 &:hover {
                     background-image: none;
-                    background-color: shade($bg_color, 1.02);
+                    background-color: transparent;
+                    color: shade($selected_bg_color, 1.17);
                 }
 
                 &:selected {
                     &, &:hover, &:focus {
                         background-image: none;
-                        background-color: $selected_bg_color;
-                        color: $selected_fg_color;
+                        background-color: transparent;
+                        color: $selected_bg_color;
                     }
                 }
             }
