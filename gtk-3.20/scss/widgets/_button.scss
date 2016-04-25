@@ -141,12 +141,10 @@
 
     &, &.flat {
         &:focus, &:hover {
-            box-shadow: none;
             color: shade($selected_bg_color, 1.17);
         }
 
         &:checked, &:active {
-            box-shadow: none;
             color: shade($selected_bg_color, 1.07);
 
             &:focus, &:hover {
@@ -158,19 +156,13 @@
             }
         }
 
-        &:focus, &:hover { color: $fg; }
-
         &:active:disabled, &:checked:disabled {
-            box-shadow: none;
-            color: shade ($selected_bg_color, 1.15);
+            color: shade($selected_bg_color, 1.15);
         }
 
         &:disabled:disabled {
             color: mix($bg, $fg, .5);
-            box-shadow: none;
         }
-
-        label { padding: 0 $spacing; }
     }
 
     &.separator, .separator {

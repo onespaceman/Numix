@@ -240,7 +240,7 @@
 
 @include exports("selected_items") {
     %selected_items {
-        background-color: transparant;
+        background-color: transparent;
 
         @at-root %nobg_selected_items, & {
             color: $selected_bg_color;
