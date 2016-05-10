@@ -51,6 +51,13 @@
         outline-color: transparent;
     }
 
+    %undecorated_button {
+        border-color: transparent;
+        background-color: transparent;
+        background-image: none;
+        box-shadow: none;
+    }
+
     %linked_middle {
         border-style: none;
 
@@ -80,6 +87,10 @@
 
         &:only-child, &:first-child:only-child {
             border-style: none;
+        }
+
+        &:only-child {
+            border-radius: $roundness;
         }
     }
 }
@@ -201,7 +212,7 @@
         min-width: 24px;
         @include button(shade($bg_color, 1.2), $fg_color);
 
-        &.link, .link & { @include linked_button(shade($bg_color, 1.2)); }
+        &.linked, .linked & { @include linked_button(shade($bg_color, 1.2)); }
 
         spinbutton & {
             color: mix($text_color, $base_color, .4);
@@ -292,6 +303,13 @@
 
 @include exports("combobox") {
     combobox {
+        button.combo {
+            // otherwise the arrow placement is not symmetric
+            min-width: 0;
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+
         arrow {
             -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
             min-height: 16px;
@@ -303,7 +321,7 @@
             padding: ($spacing - 2px) ($spacing + 1px);
         }
 
-        box > button {
+        .linked:not(.vertical) > & > box > button.combo {
             // the combo is a composite widget so the way we do button linked doesn't
             // work, special case needed. See
             // https://bugzilla.gnome.org/show_bug.cgi?id=733979
@@ -312,11 +330,11 @@
             &:dir(rtl) { @extend %linked_middle:dir(rtl); }
         }
 
-        &:first-child > button { @extend %linked_button:first-child; }
+        .linked:not(.vertical) > &:first-child > box > button.combo { @extend %linked_button:first-child; }
 
-        &:last-child > button { @extend %linked_button:last-child; }
+        .linked:not(.vertical) > &:last-child > box > button.combo { @extend %linked_button:last-child; }
 
-        &:only-child > button { @extend %linked_button:only-child; }
+        .linked:not(.vertical) > &:only-child > box > button.combo { @extend %linked_button:only-child; }
     }
 }
 

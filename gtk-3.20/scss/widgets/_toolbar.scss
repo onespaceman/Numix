@@ -46,8 +46,9 @@
     &.vertical separator { margin: ($spacing + 2px) 1px ($spacing + 2px) 0; }
 
     separator, separator:disabled {
-        color: shade($bg, ($contrast + .1));
+        color: shade($bg, ($contrast - .2));
         border-color: currentColor;
+        background-color: transparent;
 
         -GtkWidget-window-dragging: true;
     }
@@ -106,10 +107,12 @@
 
         .tiled &, .maximized & { border-radius: 0; }
 
-        .title { font: bold; }
+        .title { font-weight: bold; }
 
-        .titlebutton {
-            padding: 3px;
+        separator.titlebutton { margin-left: $spacing * 2; }
+
+        button.titlebutton {
+            padding: $spacing;
             border: 0;
             background-image: none;
             background-color: transparent;
