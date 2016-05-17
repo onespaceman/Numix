@@ -6,7 +6,6 @@
     .nemo-desktop, .nemo-desktop * {
         color: $white;
         text-shadow: 1px 1px $black;
-        border: none;
 
         &:active {
             color: $fg_color;
@@ -31,9 +30,7 @@
                 @include button($bg_color, $fg_color);
             }
 
-            button.linked, .linked .button {
-                @include linked_button($bg_color);
-            }
+            .linked > button { @include linked_button($bg_color); }
 
             combobox button {
                 padding: $spacing - 1px;
