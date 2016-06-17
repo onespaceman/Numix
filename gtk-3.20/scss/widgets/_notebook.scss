@@ -177,13 +177,10 @@
                     button, button:hover {
                         opacity: 1;
                     }
-
-                    &:checked {
-                        background-color: mix($bg_color, $base_color, .6);
-                    }
                 }
 
                 &:checked {
+                    background-color: mix($bg_color, $base_color, .4);
                     border-bottom-color: transparent;
                     outline: none;
 
@@ -193,6 +190,14 @@
 
                     &:hover {
                         background-color: mix($bg_color, $base_color, .6);
+                    }
+
+                    &:not(:first-child):not(:only-child){
+                        box-shadow: -1px 0 1px 0 rgba(0,0,0,0.1);
+                    }
+
+                    &:not(:last-child):not(:only-child) {
+                        box-shadow: 1px 0 1px 0 rgba(0,0,0,0.1);
                     }
                 }
 
@@ -219,12 +224,7 @@
                 }
 
                 &:hover {
-                    border-bottom-color: shade($base_color, .65);
                     outline: none;
-
-                    > box, > label {
-                        border-bottom-color: shade($base_color, .65);
-                    }
                 }
 
                 &:checked {
@@ -259,12 +259,7 @@
                 }
 
                 &:hover {
-                    border-left-color: shade($base_color, .65);
                     outline: none;
-
-                    > box, > label {
-                        border-left-color: shade($base_color, .65);
-                    }
                 }
 
                 &:checked {
@@ -299,12 +294,7 @@
                 }
 
                 &:hover {
-                    border-top-color: shade($base_color, .65);
                     outline: none;
-
-                    > box, > label {
-                        border-top-color: shade($base_color, .65);
-                    }
                 }
 
                 &:checked {
@@ -339,12 +329,7 @@
                 }
 
                 &:hover {
-                    border-right-color: shade($base_color, .65);
                     outline: none;
-
-                    > box, > label {
-                        border-right-color: shade($base_color, .65);
-                    }
                 }
 
                 &:checked {
